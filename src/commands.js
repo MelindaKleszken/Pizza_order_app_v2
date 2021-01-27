@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 const program = require('commander');
 const {addOrder, findOrder, updateOrder, removeOrder, listOrders} = require('./index');
 const {prompt} = require('inquirer');
