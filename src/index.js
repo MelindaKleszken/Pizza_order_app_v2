@@ -2,12 +2,6 @@ const mongoose = require('mongoose');
 require("./db/connection");
 const {Order} = require('./models/Order.js');
 
-
-//Map global promise - get rid of warning
-//mongoose.promise = global.Promise;
-
-
-
 //Add Order
 const addOrder = (order) => {
      Order.create(order)

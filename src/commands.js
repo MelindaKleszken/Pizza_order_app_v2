@@ -1,5 +1,7 @@
-
+#!/usr/bin/env node
 const program = require('commander');
+const chalk = require('chalk');
+const figlet = require('figlet');
 const {addOrder, findOrder, updateOrder, removeOrder, listOrders} = require('./index');
 const {prompt} = require('inquirer');
 
@@ -43,6 +45,12 @@ program
     .alias('b')
     .description('Buy a pizza')
     .action(() => {
+        console.log(chalk.red(figlet.textSync('Order Pizza V2',  {
+            font: 'Ghost',
+            horizontalLayout: 'default',
+            verticalLayout: 'default',
+            width: 200,
+            whitespaceBreak: true})));
         prompt(questions).then(answers => addOrder(answers));
     });
 
