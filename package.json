@@ -1,0 +1,26 @@
+{
+  "name": "pizza_order_app_v2",
+  "version": "1.0.0",
+  "description": "Pizza Order App CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelindaKleszken/Pizza_order_app_v2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelindaKleszken/Pizza_order_app_v2/issues"
+  },
+  "homepage": "https://github.com/MelindaKleszken/Pizza_order_app_v2#readme",
+  "dependencies": {
+    "commander": "^7.0.0",
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.3.3",
+    "mongoose": "^5.11.13",
+    "validator": "^13.5.2"
+  }
+}
