@@ -44,7 +44,7 @@ const updateOrder = (_id, order) => {
 
 //remove order
 const removeOrder = (_id) => {
-    Order.remove( {_id})
+    Order.deleteOne( {_id})
     .then(order => {
         console.info('Order removed');
         mongoose.connection.close();

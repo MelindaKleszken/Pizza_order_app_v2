@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const program = require('commander');
 const {addOrder, findOrder, updateOrder, removeOrder, listOrders} = require('./index');
 const {prompt} = require('inquirer');
@@ -61,6 +62,19 @@ program
         prompt(questions).then(answers => updateOrder(_id, answers));
     });
 
+//remove command
+program
+    .command('remove <_id>')
+    .alias('r')
+    .description('Remove an order')
+    .action(_id => removeOrder(_id));
+
+//list command
+program
+    .command('list')
+    .alias('l')
+    .description('List all orders')
+    .action(() => listOrders());
 
 
 program.parse(process.argv);
